@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
+import bt1.Product;
 
 /**
  *

@@ -3,12 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package bt2;
-
-import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import bt1.Product;
 
 /**
  *
