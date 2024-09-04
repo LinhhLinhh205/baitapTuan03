@@ -4,11 +4,13 @@
  */
 package bt2;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ADMIN
  */
-public class Product {
+public class Product implements Serializable{
     private String maso;
     private String ten;
     private float gia;

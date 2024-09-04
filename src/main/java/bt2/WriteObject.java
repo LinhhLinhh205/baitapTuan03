@@ -14,30 +14,33 @@ import java.util.Scanner;
  * @author ADMIN
  */
 public class WriteObject {
+
     public static void main(String[] args) {
-        ArrayList<Product> ds= new ArrayList<>();
-        Scanner sc=new Scanner(System.in);
-        try{
-            FileOutputStream fos=new FileOutputStream("sanpham.bin");
-            for(int i=0;i<3;i++){
-                System.out.println("Thong tin san pham thu "+(i+1));
+        ArrayList<Product> ds = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        try {
+            FileOutputStream fos = new FileOutputStream("sanpham.bin");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            for (int i = 0; i < 3; i++) {
+                System.out.println("Thong tin san pham thu " + (i + 1));
                 System.out.print("Nhap ma so: ");
-                String maso=sc.nextLine();
+                String maso = sc.nextLine();
                 System.out.print("Nhap ten: ");
-                String ten=sc.nextLine();
+                String ten = sc.nextLine();
                 System.out.print("Nhap gia: ");
-                float gia=sc.nextFloat();  
-                sc.nextLine();               
-                Product sp=new Product(maso, ten, gia);
-                
+                float gia = sc.nextFloat();
+                sc.nextLine();
+                Product sp = new Product(maso, ten, gia);
+                ds.add(sp);
             }
-            ObjectOutputStream oos=new ObjectOutputStream(fos);
+            
             oos.writeObject(ds);
             oos.close();
+
             System.out.println("\n Da ghi xong");
-            
-        }catch(Exception ex){
-            System.out.println("Loi xay ra: "+ex.toString());
+
+        } catch (Exception ex) {
+            System.out.println("Loi xay ra: " + ex.toString());
         }
     }
 }
